@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { useToDoStore } from '../../data/stores/useToDoStore';
 
 import styles from './index.module.scss'
+import { InputPlus } from '../components/InputPlus';
 
 export const App: React.FC = () => {
     // Получаем деструктуризаццией элементы стора
@@ -17,7 +18,11 @@ export const App: React.FC = () => {
         <article className={styles.article}>
             <h1 className={styles.articleTitle}>To Do App</h1>
             <section className={styles.articleSection}>
-
+                <InputPlus onAdd={(title) => {
+                    if (title) {
+                        createTask(title)
+                    }
+                }}/>
             </section>
             <section className={styles.articleSection}>
 
