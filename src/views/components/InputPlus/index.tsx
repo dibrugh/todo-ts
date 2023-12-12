@@ -17,9 +17,9 @@ export const InputPlus: React.FC<InputPlusProps> = ({ onAdd }) => {
     }, [inputValue])
 
     return (
-        <div className={styles.InputPlus}>
+        <div className={styles.inputPlus}>
             <input
-                className={styles.InputPlusValue}
+                className={styles.inputPlusValue}
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
@@ -31,7 +31,7 @@ export const InputPlus: React.FC<InputPlusProps> = ({ onAdd }) => {
                 placeholder='Type here...'
             />
             <button
-                className={styles.InputPlusButton}
+                className={styles.inputPlusButton}
                 onClick={addTask}
                 aria-label='Add'
             />
